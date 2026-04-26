@@ -217,11 +217,11 @@ footer { text-align: center; padding: 4rem; background: var(--light-grey); borde
 
 
 /* ==========================================
-   FINAL CONSOLIDATED MOBILE FIX
+   FINAL REFINED MOBILE FIX
    ========================================== */
 
 @media (max-width: 768px) {
-    /* 1. HEADER & NAV */
+    /* 1. HEADER & NAV (Staying on one line) */
     nav {
         flex-direction: column;
         padding: 1rem 2%;
@@ -230,7 +230,7 @@ footer { text-align: center; padding: 4rem; background: var(--light-grey); borde
     nav ul {
         display: flex;
         justify-content: center;
-        gap: 0.4rem; /* Tight gap to keep Work/Expertise/Contact on one line */
+        gap: 0.4rem;
         width: 100%;
         padding: 0;
     }
@@ -238,56 +238,63 @@ footer { text-align: center; padding: 4rem; background: var(--light-grey); borde
     nav ul li a {
         font-size: 0.7rem;
         padding: 4px;
-        white-space: nowrap; /* Forces text not to break into two lines */
+        white-space: nowrap;
     }
 
-    /* 2. CONTACT SECTION (The fix for the overflow) */
+    /* 2. HERO SECTION (Title smaller, Photo larger) */
+    .hero {
+        flex-direction: column-reverse;
+        text-align: center;
+        padding: 2rem 5%;
+        min-height: auto;
+    }
+
+    .hero h1 { 
+        font-size: 1.7rem; /* Slightly reduced for a cleaner look */
+    }
+
+    .profile-img {
+        width: 220px; /* Increased back up from 180px */
+        height: 220px;
+        margin-bottom: 1.5rem;
+        box-shadow: 10px 10px 0px var(--light-grey);
+    }
+
+    /* 3. CONTACT SECTION (Safe internal fit) */
     .contact-section {
-        padding: 2rem 10px; /* Minimal side margin */
-        width: 100%;
-        box-sizing: border-box;
+        padding: 2rem 10px;
     }
 
     .contact-card {
         padding: 2rem 1rem;
         width: 100% !important;
-        max-width: 100%;
         box-sizing: border-box;
-        overflow: hidden; /* Clips any remaining overflow */
     }
 
     .contact-links {
         display: flex;
-        flex-direction: column; /* Simple stacking is safest for mobile */
+        flex-direction: column;
         gap: 0.8rem;
-        width: 100%;
     }
 
     .contact-item {
         width: 100% !important;
-        min-width: 0 !important; /* Overrides the desktop 240px width */
+        min-width: 0 !important;
         padding: 0.6rem !important;
-        box-sizing: border-box;
     }
 
     .contact-item strong {
         font-size: 0.75rem; 
-        word-break: break-all; /* Essential for long email handles */
+        word-break: break-all;
     }
 
-    /* 3. HERO & IMAGES */
-    .hero {
-        flex-direction: column-reverse;
-        padding: 2rem 5%;
-    }
-
-    .profile-img {
-        width: 180px;
-        height: 180px;
-    }
-
+    /* 4. CONTENT WRAPPERS */
     .image-frame {
-        height: 250px;
+        height: 280px;
+    }
+
+    .page-wrapper h1 { 
+        font-size: 1.6rem; 
     }
 }
 
