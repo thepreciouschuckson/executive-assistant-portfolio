@@ -217,11 +217,11 @@ footer { text-align: center; padding: 4rem; background: var(--light-grey); borde
 
 
 /* ==========================================
-   FINAL REFINED MOBILE FIX
+   FINAL POLISHED MOBILE OPTIMIZATION
    ========================================== */
 
 @media (max-width: 768px) {
-    /* 1. HEADER & NAV (Staying on one line) */
+    /* 1. HEADER & NAV (Increased size, still one line) */
     nav {
         flex-direction: column;
         padding: 1rem 2%;
@@ -230,18 +230,23 @@ footer { text-align: center; padding: 4rem; background: var(--light-grey); borde
     nav ul {
         display: flex;
         justify-content: center;
-        gap: 0.4rem;
+        gap: 0.7rem; /* Slightly more breathing room */
         width: 100%;
         padding: 0;
     }
 
     nav ul li a {
-        font-size: 0.7rem;
+        font-size: 0.85rem; /* Increased for better readability */
         padding: 4px;
         white-space: nowrap;
     }
 
-    /* 2. HERO SECTION (Title smaller, Photo larger) */
+    .logo {
+        font-size: 1rem; /* Matched logo size slightly up */
+        margin-bottom: 0.5rem;
+    }
+
+    /* 2. HERO SECTION */
     .hero {
         flex-direction: column-reverse;
         text-align: center;
@@ -250,17 +255,28 @@ footer { text-align: center; padding: 4rem; background: var(--light-grey); borde
     }
 
     .hero h1 { 
-        font-size: 1.7rem; /* Slightly reduced for a cleaner look */
+        font-size: 1.7rem; 
     }
 
     .profile-img {
-        width: 220px; /* Increased back up from 180px */
+        width: 220px;
         height: 220px;
         margin-bottom: 1.5rem;
         box-shadow: 10px 10px 0px var(--light-grey);
     }
 
-    /* 3. CONTACT SECTION (Safe internal fit) */
+    /* 3. IMPACT BAR (Stacked) */
+    .impact-bar {
+        flex-direction: column;
+        gap: 2.5rem;
+        padding: 3rem 5%;
+    }
+
+    .stat h2 {
+        font-size: 2.5rem;
+    }
+
+    /* 4. CONTACT CARD */
     .contact-section {
         padding: 2rem 10px;
     }
@@ -284,11 +300,11 @@ footer { text-align: center; padding: 4rem; background: var(--light-grey); borde
     }
 
     .contact-item strong {
-        font-size: 0.75rem; 
+        font-size: 0.8rem; 
         word-break: break-all;
     }
 
-    /* 4. CONTENT WRAPPERS */
+    /* 5. PAGE WRAPPERS */
     .image-frame {
         height: 280px;
     }
