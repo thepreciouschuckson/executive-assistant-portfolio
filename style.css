@@ -221,3 +221,93 @@ footer { text-align: center; padding: 4rem; background: var(--light-grey); borde
         grid-template-columns: 1fr;
     }
 }
+
+/* ==========================================
+   MOBILE OPTIMIZATION (Screens under 768px)
+   ========================================== */
+
+@media (max-width: 768px) {
+    /* 1. HEADER & NAV */
+    nav {
+        flex-direction: column; /* Stacks logo above links */
+        gap: 1rem;
+        padding: 1rem 5%;
+    }
+
+    nav ul {
+        gap: 1rem;
+        flex-wrap: wrap; /* Prevents links from cutting off */
+        justify-content: center;
+    }
+
+    nav ul li {
+        margin: 0;
+    }
+
+    /* 2. HOME PAGE HERO */
+    .hero {
+        flex-direction: column-reverse; /* Puts text below the photo for better flow */
+        text-align: center;
+        padding: 3rem 5%;
+        min-height: auto;
+        gap: 2rem;
+    }
+
+    .hero h1 {
+        font-size: 2.2rem; /* Shrinks large title so it fits */
+    }
+
+    .hero p {
+        margin: 0 auto 2rem auto;
+    }
+
+    .profile-img {
+        width: 250px; /* Smaller photo for mobile */
+        height: 250px;
+        box-shadow: 10px 10px 0px var(--light-grey);
+    }
+
+    /* 3. IMPACT BAR */
+    .impact-bar {
+        flex-direction: column; /* Stacks the 85% and 1,000+ stats */
+        gap: 3rem;
+        padding: 3rem 5%;
+    }
+
+    .stat h2 {
+        font-size: 2.5rem;
+    }
+
+    /* 4. CASE STUDIES & SERVICES */
+    .page-wrapper {
+        padding: 3rem 5%; /* Reduces huge desktop margins */
+    }
+
+    .page-wrapper h1 {
+        font-size: 2rem;
+        margin-bottom: 2rem;
+    }
+
+    .case-card {
+        margin-bottom: 4rem;
+        padding-top: 2rem;
+    }
+
+    .image-frame {
+        height: 300px; /* Reduces frame height so user doesn't have to scroll forever */
+        margin-top: 1.5rem;
+    }
+
+    .card-grid {
+        grid-template-columns: 1fr; /* Forces services into a single column */
+    }
+
+    /* 5. CONTACT BUTTONS */
+    .contact-links {
+        grid-template-columns: 1fr; /* Stacks Email and LinkedIn */
+    }
+    
+    .contact-item {
+        width: 100%;
+    }
+}
